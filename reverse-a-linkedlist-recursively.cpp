@@ -74,6 +74,5 @@ int main(){
     cout<<head;
     head=reverselinkedlist(head);//since we are return shead, we will equate it with head,
     cout<<head;                  //to update it
-//=>cout<<head2 (once head has been printed)
     return 0;
 }
