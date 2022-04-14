@@ -1,0 +1,14 @@
+Linked List : Collection of nodes that store some data.
+___________
+| 5 | 100 |
+  ^    ^
+  |    |
+Data   Node*
+------------
+     |
+    Node
+
+Type of 'head' and 'tail' -> Node*
+          |           |
+    (address of    (address of 
+      1st data)      last data)
