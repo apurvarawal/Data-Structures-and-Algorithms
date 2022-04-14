@@ -55,7 +55,7 @@ istream& operator>>(istream &k,node*&head){ //since we have to modify the head, 
     return k;
 }
 
-//TIME COMPLEXITY : O(N^2)
+//O(N) time and O(N) stack space
 
 node* reverselinkedlist(node*head){//in recursive, we will pass head by value
     //base case
