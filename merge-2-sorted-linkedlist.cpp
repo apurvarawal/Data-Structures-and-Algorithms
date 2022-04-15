@@ -119,7 +119,7 @@ node* merge(node* head, node* head2){
     }
     else{
         c=head;
-        c->next=merge(head->next,head2);
+        c->next=merge(head,head2->next);
     }
     return c;
 }
