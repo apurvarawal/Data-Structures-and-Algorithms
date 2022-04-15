@@ -1,0 +1,18 @@
+--  k = time to compute the mid point 
+--  T(n/2) = time to sort recursive arrays of size n/2
+--  2T(n/2) = time to sort 2 recursive arrays of size n/2
+--  k*n = time to merge the arrays
+
+for ARRAYS :
+
+T(n) = k + 2T(n/2) + k*n 
+     = (n + 1)*k + 2T(n/2)
+     = n*k + 2T(n/2)
+     = O(nlogn)
+
+for linked list :
+
+T(n) = k*n + 2T(n/2) + k*n 
+     = 2*k*n + 2T(n/2)
+     = k' * n + 2T(n/2)
+     = O(nlogn)
