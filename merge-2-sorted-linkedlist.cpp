@@ -104,31 +104,31 @@ istream& operator>>(istream &k,node*&head){ //since we have to modify the head, 
     return k;
 }
 
-node* merge(node* head, node* head2){
+node* merge(node* head1, node* head2){
     //base case
-    if(head==NULL){
+    if(head1==NULL){
         return head2;
     }
     if(head2==NULL){
-        return head;
+        return head1;
     }
     node* c;
-    if(head->data < head2->data){
-        c=head;
-        c->next=merge(head->next,head2);
+    if(head1->data < head2->data){
+        c=head1;
+        c->next=merge(head1->next,head2);
     }
     else{
-        c=head;
-        c->next=merge(head,head2->next);
+        c=head2;
+        c->next=merge(head1,head2->next);
     }
     return c;
 }
 
 int main(){
-    node* head; 
+    node* head1; 
     node* head2;
     cin>>head>>head2;
-    node* order = merge(head,head2);
+    node* order = merge(head1,head2);
     cout<<order;
     return 0;
 }
